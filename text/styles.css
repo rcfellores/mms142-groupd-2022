@@ -134,3 +134,33 @@ button{
 }
 
 /* =========Header and Nav========= */
+ol {
+    list-style-type: outside;
+    margin: 15px;
+    padding: 10;
+    position: relative;
+    left: 7px;
+  }
+
+.header{
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.icon_text{
+    list-style-type: none;
+    position: relative;
+    display: flex;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.icons{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: flex;
+    margin-left: 0px;
+    vertical-align:middle;
+  }
