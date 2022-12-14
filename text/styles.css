@@ -143,9 +143,12 @@ ol {
   }
 
 .header{
-    padding: 0;
-    display: flex;
-    align-items: center;
+    width: 100%;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
 }
 
 .icon_text{
@@ -163,4 +166,11 @@ ol {
     display: flex;
     margin-left: 0px;
     vertical-align:middle;
-  }
+}
+
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
