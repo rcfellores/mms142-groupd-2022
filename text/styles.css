@@ -81,6 +81,11 @@ body{
     color: var(--text-color);
 }
 
+h1, h2, h3, h4{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
 ul{
     list-style: none;
 }
@@ -96,14 +101,50 @@ img{
 
 button{
     cursor: pointer;
-    border-radius: 25px;
+    border-radius: none;
     outline: none;
 }
 
 /* =========THEME========= */
 /* =========Variables for Dark Theme========= */
-/* =========Toggle Button Dark/Light========= */
-/* =========Color Change Content Dark Theme========= */
+body.dark-theme {
+    --first-color: hsl(200, 76%, 74%);
+    --button-color: hsl(0, 0%, 24%);
+    --button-color-alt: hsl(0, 0%, 28%);
+    --title-color: hsl(0, 0%, 95%);
+    --text-color: hsl(0, 0%, 75%);
+    --body-color: hsl(0, 0%, 12%);
+    --container-color: hsl(0, 0%, 16%);
+    --border-color: hsl(0, 0%, 20%);
+  }
+
+  /*========== Button Dark/Light ==========*/
+.change-theme {
+    color: var(--title-color);
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+
+.dark-theme .change-theme,
+.dark-theme .nav_toggle,
+.dark-theme .nav_github,
+.dark-theme .button-gray {
+  color: hsl(0, 0%, 15%);
+}
+
+.dark-theme .scroll-header {
+    box-shadow: 0 1px 4px hsla(0, 0%, 4%, .3);
+  }
+  
+  .scroll-header .change-theme,
+  .scroll-header .nav_toggle,
+  .scroll-header .nav_github {
+    color: var(--title-color);
+}
+
+.dark-theme::-webkit-scrollbar {
+    background: hsl(0, 0%, 30%);
+  }
 
 /* =========REUSABLE CSS========= */
 .container{
@@ -133,6 +174,19 @@ button{
     text-align: center;
 }
 
+.section_title::before{
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 67px;
+    height: 1px;
+    background-color: var(--first-color);
+}
+
+
 /* =========Header and Nav========= */
 ol {
     list-style-type: outside;
@@ -143,9 +197,13 @@ ol {
   }
 
 .header{
-    padding: 0;
+    width: 100%;
+    background: transparent;
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
+    transition: .4s;
 }
 
 .icon_text{
@@ -163,4 +221,27 @@ ol {
     display: flex;
     margin-left: 0px;
     vertical-align:middle;
+  }
+
+  .nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.nav_logo, 
+.nav_toggle, 
+.nav_github, 
+.nav_close {
+  color: var(--title-color);
+}
+
+.nav_logo {
+    text-transform: uppercase;
+    font-weight: var(--font-bold);
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    column-gap: .25rem;
   }
