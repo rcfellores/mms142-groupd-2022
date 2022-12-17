@@ -26,26 +26,6 @@ body {
 
 
 
-.column-quote {
-  width: 70%;
-  height: 120px;
-  padding: 10px;
-  padding-left:10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  margin:auto;
-  margin-bottom: 10px;
-  border: 20px solid #FEDE00;
-}
-
-.quote 
-{
-  font-size: 46px;
-  font-weight: bold;
-  line-height: 1;
-  text-align: center;
-}
-
 a {	color: #FCE311; }
 
 a:hover { color: #FCE311; }
